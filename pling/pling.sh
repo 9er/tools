@@ -2,8 +2,12 @@
 #
 # usage: ping.sh target
 #
-# 'pling'-sound is from jobro on freesound.org
+# Pings a target once a second. As soon as the target replies, it plays a
+# *pling* sound and exits.
+#
+# *pling*-sound is from jobro on freesound.org
 # http://freesound.org/people/jobro/sounds/180894/
+
 
 # check if a target is specified
 if [ $# -eq 0 ]
@@ -43,7 +47,7 @@ do
     if ping -c 1 -w 1 $1 > /dev/null
     then
         # play a sound when the target respons
-        mpv --really-quiet 180894_35187-lq.mp3
+        $PLAYER sound/180894_35187-lq.mp3
         break
     fi
 done
