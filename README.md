@@ -4,6 +4,11 @@ tools
 a simple collection of random tools
 
 
+#### backup
+
+Backups files by compacting them with .tar.gz and encrypting them using gpg with your public key.
+
+
 #### fileupload
 
 HTTP server with a HTML form that allows to upload files to the server.
