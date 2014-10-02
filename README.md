@@ -19,3 +19,11 @@ Files are stored in a folder named "files" inside the current directory.
 
 Pings a target and plays a *pling*-sound when the targets comes up.
 
+
+
+#### tree
+
+Prints PID and the process tree for a given process name.
+Comes in handy, when you're trying to find out, who is spawning a process, which is gone in htop tree view, before you can find it.
+Usage: ./tree.sh someprogram
+
