@@ -40,14 +40,33 @@ fi
 
 cd "$(dirname "$0")"
 
-# main loop
-while true
-do
+
+
+
+if [ "$2" = "-r" ]; then
+   # main loop
+   while true
+   do
     # ping once every second
-    if ping -c 1 -w 1 $1 > /dev/null
+    ping -c 1 -w 1 $1 > /dev/null
+    STATUS=$?
+    if [ $STATUS -ne 0 ]
     then
         # play a sound when the target respons
         $PLAYER sound/180894_35187-lq.mp3
         break
     fi
-done
+    done
+else 
+   while true
+     do
+    # ping once every second
+      if ping -c 1 -w 1 $1 > /dev/null
+      then
+        # play a sound when the target respons
+        $PLAYER sound/180894_35187-lq.mp3
+        break
+    fi
+    done
+
+fi
