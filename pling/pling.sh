@@ -55,6 +55,8 @@ if [ "$2" = "-r" ]; then
         # play a sound when the target respons
         $PLAYER sound/180894_35187-lq.mp3
         break
+    else
+    sleep 1
     fi
     done
 else 
