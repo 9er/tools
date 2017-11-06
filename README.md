@@ -17,7 +17,7 @@ Files are stored in a folder named "files" inside the current directory.
 
 #### pling
 
-Pings a target and plays a *pling*-sound when the targets comes up.
+Pings a target and plays a *pling*-sound when the targets comes up or goes down (-r flag).
 
 
 
